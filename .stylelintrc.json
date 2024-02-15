@@ -1,8 +1,10 @@
 {
+  "processors": ["stylelint-processor-styled-components"],
   "customSyntax": "postcss-styled-syntax",
   "extends": ["stylelint-config-standard"],
   "plugins": ["stylelint-order"],
   "rules": {
+    "media-query-no-invalid": null,
     "alpha-value-notation": "percentage",
     "color-function-notation": "legacy",
     "hue-degree-notation": "number",

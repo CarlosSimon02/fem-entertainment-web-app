@@ -33,7 +33,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prepare": "husky"
+    "prepare": "husky",
+    "commitlint": "commitlint --edit"
   },
   "eslintConfig": {
     "extends": [
@@ -54,6 +55,8 @@
     ]
   },
   "devDependencies": {
+    "@commitlint/cli": "^18.6.1",
+    "@commitlint/config-conventional": "^18.6.2",
     "eslint": "^8.56.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",

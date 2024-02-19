@@ -1,0 +1,11 @@
+{
+  "customSyntax": "postcss-styled-syntax",
+  "extends": ["stylelint-config-standard"],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "alpha-value-notation": "percentage",
+    "color-function-notation": "legacy",
+    "hue-degree-notation": "number",
+    "order/properties-alphabetical-order": true
+  }
+}

@@ -1,9 +1,10 @@
 import React from 'react';
+
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import * as serviceWorkerRegistration from './serviceWorkerRegistration';
-import reportWebVitals from './reportWebVitals';
+
+import App from './app.main';
+import reportWebVitals from './report-web-vitals';
+import * as serviceWorkerRegistration from './service-worker-registration';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

@@ -6,6 +6,7 @@ List of things I used while working on this project.
 
 - [Articles](#articles)
 - [Documentations](#documentations)
+- [People's Answer](#peoples-answer)
 - [Videos](#videos)
 - [Guidelines](#guidelines)
 - [Tools](#tools)
@@ -16,6 +17,8 @@ List of things I used while working on this project.
 - [How to Write Good Commit Messages with Commitlint](https://www.freecodecamp.org/news/how-to-use-commitlint-to-write-good-commit-messages/)
 - [Getting started with Husky and Lint-staged for pre-commit hooks](https://duncanlew.medium.com/getting-started-with-husky-and-lint-staged-for-pre-commit-hooks-c2764d8c9ae)
 - [How to Hide API Keys in Frontend Apps using Netlify Functions](https://www.freecodecamp.org/news/hide-api-keys-in-frontend-apps-using-netlify-functions/)
+- [Fetch API, do you really know how to handle errors?](https://dev.to/dionarodrigues/fetch-api-do-you-really-know-how-to-handle-errors-2gj0)
+- [The styled-components Happy Path](https://www.joshwcomeau.com/css/styled-components/)
 
 ## Documentations
 
@@ -26,6 +29,11 @@ List of things I used while working on this project.
 - [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.4/)
 - [React Router](https://reactrouter.com/en/main/start/tutorial)
 - [The Movie Database API](https://developer.themoviedb.org/docs/authentication-application)
+
+## People's Answer
+
+- [https://stackoverflow.com/questions/43707076/how-does-the-position-sticky-property-work](https://stackoverflow.com/questions/43707076/how-does-the-position-sticky-property-work) - How to make `position: sticky` work.
+- [https://stackoverflow.com/questions/54113367/extending-styles-with-styled-components-not-working](https://stackoverflow.com/questions/54113367/extending-styles-with-styled-components-not-working)
 
 ## Videos
 

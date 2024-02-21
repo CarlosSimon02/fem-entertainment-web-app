@@ -67,7 +67,14 @@ To Do
 
 Learned
 
+- New way on how to setup router with react router
+- How to secure API Keys, BY DOING A FREAKING BACKEND!!!
+
 ## 2024-02-20
+
+Learned
+
+- Found another way of securing API keys, BY USING SERVERLESS FUNCTIONS
 
 ## 2024-02-21
 

@@ -1,10 +1,10 @@
 import { AxiosError } from 'axios';
 
-import { breakpoints } from '../styles/sizes';
-import { StatusCode } from './types.d';
+import { breakpoints, device } from '../styles/sizes';
+import { CSSProperty, StatusCode } from './types.d';
 
 const BASE_FONT_SIZE = 16;
-const { xs, sm, md } = breakpoints.up;
+const { mobile, tablet, laptop, desktop } = breakpoints.up;
 
 export const pxToRem = (pxSize: number): string => {
   return `${pxSize / BASE_FONT_SIZE}rem`;
@@ -45,12 +45,58 @@ export const fluidSize = (
   return `clamp(${minRem}rem, ${vwFactor}vw + ${remFactor}rem, ${maxRem}rem)`;
 };
 
-export const fluidSizeXsToSm = (minSize: number, maxSize: number): string => {
-  return fluidSize(minSize, maxSize, xs, sm);
+export const fluidSizeMobileToTablet = (
+  minSize: number,
+  maxSize: number
+): string => {
+  return fluidSize(minSize, maxSize, mobile, tablet);
 };
 
-export const fluidSizeSmToMd = (minSize: number, maxSize: number): string => {
-  return fluidSize(minSize, maxSize, sm, md);
+export const fluidSizeTabletToLaptop = (
+  minSize: number,
+  maxSize: number
+): string => {
+  return fluidSize(minSize, maxSize, tablet, laptop);
+};
+
+export const fluidSizeTabletToDesktop = (
+  minSize: number,
+  maxSize: number
+): string => {
+  return fluidSize(minSize, maxSize, tablet, desktop);
+};
+
+export const fluidSizeLaptopToDesktop = (
+  minSize: number,
+  maxSize: number
+): string => {
+  return fluidSize(minSize, maxSize, laptop, desktop);
+};
+
+export const fluidSizeMobileToLaptop = (
+  minSize: number,
+  maxSize: number
+): string => {
+  return fluidSize(minSize, maxSize, mobile, laptop);
+};
+
+export const fluidSizeAllDevice = (
+  cssProperty: CSSProperty,
+  values: [number, number, number, number] // [mobile,tablet,laptop,desktop]
+) => {
+  const [mobilePx, tabletPx, laptopPx, desktopPx] = values;
+
+  return `
+    ${cssProperty}: ${fluidSizeMobileToTablet(mobilePx, tabletPx)};
+
+    @media ${device.up.tablet} {
+      ${cssProperty}: ${fluidSizeTabletToLaptop(tabletPx, laptopPx)};
+    }
+
+    @media ${device.up.laptop} {
+      ${cssProperty}: ${fluidSizeLaptopToDesktop(laptopPx, desktopPx)};
+    }
+  `;
 };
 
 export const logAxiosError = (

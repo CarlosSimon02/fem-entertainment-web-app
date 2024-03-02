@@ -1,12 +1,10 @@
 import LatestMediaView from '@/components/latest-media-view/latest-media-view.component';
 
-import { StyledSection } from './home.styles';
-
 const Home = () => {
   return (
-    <StyledSection>
+    <div>
       <LatestMediaView />
-    </StyledSection>
+    </div>
   );
 };
 

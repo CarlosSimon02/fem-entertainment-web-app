@@ -21,3 +21,22 @@ export enum StatusCode {
   Success = 200,
   Error = 500
 }
+
+export type CSSProperty =
+  | 'padding-inline'
+  | 'padding-block'
+  | 'width'
+  | 'border-radius'
+  | 'font-size'
+  | 'max-width'
+  | 'margin-inline'
+  | 'margin-block'
+  | 'padding-block-start'
+  | 'padding-block-end'
+  | 'gap'
+  | 'margin-block-start'
+  | 'margin-block-end'
+  | 'column-gap'
+  | 'row-gap'
+  | 'height'
+  | 'padding';

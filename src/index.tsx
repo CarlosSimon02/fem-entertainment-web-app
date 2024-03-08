@@ -2,7 +2,7 @@ import React from 'react';
 
 import ReactDOM from 'react-dom/client';
 
-import App from './app.main';
+import App from './app';
 import reportWebVitals from './report-web-vitals';
 import * as serviceWorkerRegistration from './service-worker-registration';
 

@@ -19,6 +19,8 @@ List of things I used while working on this project.
 - [How to Hide API Keys in Frontend Apps using Netlify Functions](https://www.freecodecamp.org/news/hide-api-keys-in-frontend-apps-using-netlify-functions/)
 - [Fetch API, do you really know how to handle errors?](https://dev.to/dionarodrigues/fetch-api-do-you-really-know-how-to-handle-errors-2gj0)
 - [The styled-components Happy Path](https://www.joshwcomeau.com/css/styled-components/)
+- [Using path aliases for cleaner React and TypeScript imports](https://blog.logrocket.com/using-path-aliases-cleaner-react-typescript-imports/)
+- [using-swiper-element-in-react](https://swiperjs.com/blog/using-swiper-element-in-react)
 
 ## Documentations
 

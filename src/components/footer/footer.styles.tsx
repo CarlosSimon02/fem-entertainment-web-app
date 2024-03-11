@@ -11,6 +11,14 @@ import {
 import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 
+const IconStyle = css`
+  width: ${fluidSizeLaptopToDesktop(20, 24)};
+
+  & path {
+    fill: ${({ theme }) => theme.color.buttonFg};
+  }
+`;
+
 export const StyledVerticalSeparator = styled.div`
   border-left: ${pxToRem(1)} solid ${({ theme }) => theme.color.separator};
   height: ${fluidSizeLaptopToDesktop(21, 27)};
@@ -31,23 +39,15 @@ export const StyledFooterBottom = styled.div`
   align-items: center;
   border-top: ${pxToRem(1)} solid ${({ theme }) => theme.color.separator};
   color: ${({ theme }) => theme.color.paragraphText};
-  gap: ${pxToRem(20)} ${pxToRem(40)};
   display: flex;
   flex-wrap: wrap;
   font-size: ${fluidSizeLaptopToDesktop(14, 18)};
+  gap: ${pxToRem(20)} ${pxToRem(40)};
   justify-content: space-between;
   padding-top: ${fluidSizeLaptopToDesktop(20, 24)};
 
   ${StyledLink} {
     font-size: inherit;
-  }
-`;
-
-const IconStyle = css`
-  width: ${fluidSizeLaptopToDesktop(20, 24)};
-
-  & path {
-    fill: ${({ theme }) => theme.color.buttonFg};
   }
 `;
 

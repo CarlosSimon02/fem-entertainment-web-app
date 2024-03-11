@@ -11,10 +11,9 @@ export const StyledHamburgerSVG = styled(HamburgerSVG)`
 `;
 
 export const StyledButton = styled.button`
-  background-color: ${({ theme }) => theme.color.outlineBoxDeepBg};
+  background-color: ${({ theme }) => theme.color.outlineBoxShallowBg};
   border: ${pxToRem(3)} solid ${({ theme }) => theme.color.outlineBoxBorder};
   border-radius: ${pxToRem(6)};
-  border-style: none;
   cursor: pointer;
   display: flex;
   padding: ${pxToRem(12)};

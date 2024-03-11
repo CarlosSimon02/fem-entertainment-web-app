@@ -34,7 +34,6 @@ export const StyledTextWrapper = styled.div`
 
 export const StyledBox = styled.div`
   border: ${pxToRem(1)} solid ${({ theme }) => theme.color.outlineBoxBorder};
-  background-color: ${({ theme }) => theme.color.outlineBoxDeepBg};
   border-radius: ${pxToRem(12)};
   position: relative;
   overflow: hidden;
@@ -86,5 +85,6 @@ export const StyledBox = styled.div`
 export const StyledWrapper = styled.div`
   ${SpacerSectionStyle}
 
-  ${fluidSizeAllDevice('margin-block', [80, 100, 120, 150])};
+  ${fluidSizeAllDevice('margin-block-start', [30, 30, 40, 50])};
+  ${fluidSizeAllDevice('margin-block-end', [80, 100, 120, 150])};
 `;

@@ -46,7 +46,8 @@ const COLOR = {
 
 const accented = {
   textfieldCaret: COLOR.RED45,
-  accentButtonBg: COLOR.RED45
+  accentButtonBg: COLOR.RED45,
+  activeRatingStar: COLOR.RED45
 };
 
 const darkTheme = {

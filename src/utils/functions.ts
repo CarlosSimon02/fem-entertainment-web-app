@@ -113,3 +113,17 @@ export const logAxiosError = (
     console.error(`Request set up error`, StatusCode.Error);
   }
 };
+
+export const abbreviateNumber = (number: number) => {
+  var suffixes = ['', 'K', 'M', 'B', 'T'];
+
+  var suffixIndex = Math.floor(('' + number).length / 3);
+
+  if (suffixIndex === 0) return number;
+
+  var abbreviatedNumber =
+    parseFloat((number / Math.pow(1000, suffixIndex)).toFixed(1)) +
+    suffixes[suffixIndex];
+
+  return abbreviatedNumber;
+};

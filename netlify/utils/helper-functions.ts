@@ -2,10 +2,8 @@ import axios, { AxiosError } from 'axios';
 
 import {
   CustomResponse,
-  MediaListItemInfo,
-  MediaRating,
-  MediaType,
-  ResponseMediaListItemInfo,
+  MediaCarouselSlideInfo,
+  ResponseMediaCarouselSlideInfo,
   StatusCode
 } from './types.d';
 
@@ -67,24 +65,20 @@ export const mapToMediaListItemInfo = ({
   name,
   release_date,
   first_air_date,
-  adult,
-  backdrop_path,
-  media_type
-}: ResponseMediaListItemInfo): MediaListItemInfo => ({
+  poster_path,
+  vote_average,
+  vote_count
+}: ResponseMediaCarouselSlideInfo): MediaCarouselSlideInfo => ({
   id,
-  mediaType: media_type === 'tv' ? MediaType.TVSeries : MediaType.Movie,
   title: title || name,
-  releaseYear: (release_date || first_air_date)?.split('-')[0] || '',
-  rating: adult ? MediaRating.R : MediaRating.G,
-  imagePath: backdrop_path || ''
+  posterPath: poster_path || '',
+  voteAverage: vote_average,
+  voteCount: vote_count,
+  releaseYear: (release_date || first_air_date)?.split('-')[0] || ''
 });
 
-export const shuffleMediaListItems = (mediaListItems: MediaListItemInfo[]) => {
-  for (let i = mediaListItems.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [mediaListItems[i], mediaListItems[j]] = [
-      mediaListItems[j],
-      mediaListItems[i]
-    ];
-  }
+export const sortByVoteCount = (mediaListItems: MediaCarouselSlideInfo[]) => {
+  return mediaListItems.sort((a, b) => {
+    return (a.voteAverage - b.voteAverage) * -1;
+  });
 };

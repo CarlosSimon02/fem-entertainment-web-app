@@ -1,3 +1,4 @@
+import '@smastrom/react-rating/style.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 

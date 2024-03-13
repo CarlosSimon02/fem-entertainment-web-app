@@ -11,43 +11,33 @@ export type CustomResponse = {
   body: string;
 };
 
-export enum MediaRating {
-  G = 'G',
-  R = '18+'
-}
-
-export enum MediaType {
-  TVSeries = 'TV Series',
-  Movie = 'Movie'
-}
-
-export type MediaListItemInfo = {
+export type MediaCarouselSlideInfo = {
   id: number;
-  mediaType: MediaType;
   title?: string;
-  releaseYear?: string;
-  rating: MediaRating;
-  imagePath: string;
+  posterPath: string;
+  releaseYear: string;
+  voteAverage: number;
+  voteCount: number;
 };
 
-type ResponseMediaListItemInfo =
+type ResponseMediaCarouselSlideInfo =
   | {
-      adult: boolean;
       id: number;
       release_date: string;
       first_air_date?: never;
       title: string;
       name?: never;
-      media_type: string | undefined;
-      backdrop_path: string;
+      poster_path: string;
+      vote_average: number;
+      vote_count: number;
     }
   | {
-      adult: boolean;
       release_date?: never;
       first_air_date: string;
       title?: never;
       name: string;
       id: number;
-      media_type: string | undefined;
-      backdrop_path: string;
+      poster_path: string;
+      vote_average: number;
+      vote_count: number;
     };

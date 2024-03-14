@@ -39,6 +39,7 @@ export const StyledPoster = styled.div<{ $imageUrl: string }>`
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: ${fluidSizeLaptopToDesktop(10, 12)};
+  width: 100%;
 `;
 
 export const StyledPosterGrid = styled.div`
